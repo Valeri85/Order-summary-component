@@ -1,0 +1,29 @@
+@use 'typography';
+@use '../helpers/functions';
+
+@font-face {
+	font-family: 'Red Hat Display';
+	font-display: swap;
+	src: url('../fonts/RedHatDisplay-Medium.woff2') format('woff2'),
+		url('../fonts/RedHatDisplay-Medium.woff') format('woff');
+	font-weight: functions.weight(medium);
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Red Hat Display';
+	font-display: swap;
+	src: url('../fonts/RedHatDisplay-Bold.woff2') format('woff2'),
+		url('../fonts/RedHatDisplay-Bold.woff') format('woff');
+	font-weight: functions.weight(bold);
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Red Hat Display';
+	font-display: swap;
+	src: url('../fonts/RedHatDisplay-Black.woff2') format('woff2'),
+		url('../fonts/RedHatDisplay-Black.woff') format('woff');
+	font-weight: functions.weight('black');
+	font-style: normal;
+}

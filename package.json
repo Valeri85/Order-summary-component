@@ -1,0 +1,32 @@
+{
+	"name": "order-summary-component-main",
+	"version": "1.0.0",
+	"description": "Order summary card challenge.",
+	"main": "index.js",
+	"scripts": {
+		"sync": "npx browser-sync start --server --files '*' --watch --no-notify",
+		"sass:watch": "npx sass -w scss/style.scss:css/style.css",
+		"groupMedia": "npx group-css-media-queries css/style.css css/style.css",
+		"postcss:autoprefixer": "npx postcss css/style.css -u autoprefixer -r",
+		"sass:compressed": "npx sass css/style.css:css/style.min.css --style compressed",
+		"ttf2woff": "npx ttf2woff fonts/RedHatDisplay-Medium.ttf fonts/RedHatDisplay-Medium.woff && npx ttf2woff fonts/RedHatDisplay-Bold.ttf fonts/RedHatDisplay-Bold.woff && npx ttf2woff fonts/RedHatDisplay-Black.ttf fonts/RedHatDisplay-Black.woff"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"browser-sync": "^2.27.7"
+	},
+	"devDependencies": {
+		"autoprefixer": "^10.4.2",
+		"group-css-media-queries": "^1.4.1",
+		"postcss": "^8.4.6",
+		"postcss-cli": "^9.1.0",
+		"sass": "^1.49.7",
+		"ttf2woff": "^3.0.0",
+		"ttf2woff2": "^4.0.4"
+	},
+	"browserslist": [
+		"> 0.01%"
+	]
+}

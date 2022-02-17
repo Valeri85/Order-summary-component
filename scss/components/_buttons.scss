@@ -1,0 +1,42 @@
+@use '../helpers/functions';
+@use '../helpers/mixins';
+
+.btn {
+	min-width: 100%;
+	border: 0;
+	font: inherit;
+	background: transparent;
+	cursor: pointer;
+	&--submit,
+	&--cencel {
+		font-size: 0.9rem;
+		@include mixins.desktop {
+			font-size: 0.75rem;
+		}
+	}
+	&--submit {
+		padding: 0.9em;
+		background-color: var(--bright-blue);
+		border-radius: functions.em(12);
+		box-shadow: 0 20px 30px -15px var(--desaturated-blue);
+		font-weight: functions.weight(bold);
+		color: var(--very-pale-blue);
+		transition: background-color var(--animation-time) ease-out;
+		&:hover {
+			background-color: var(--desaturated-blue);
+		}
+	}
+	&--cencel {
+		min-width: 0;
+		margin-top: 1.5em;
+		font-weight: functions.weight('black');
+		color: var(--desaturated-blue);
+		transition: color var(--animation-time) ease-out;
+		@include mixins.desktop {
+			margin-top: 2em;
+		}
+		&:hover {
+			color: var(--dark-blue);
+		}
+	}
+}

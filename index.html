@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<!-- displays site properly based on user's device -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<!-- Title -->
+		<title>Frontend Mentor | Order summary card</title>
+		<!-- Preload css -->
+		<link rel="preload" href="./css/style.min.css" as="style" />
+		<!-- Css -->
+		<link rel="stylesheet" href="./css/style.min.css" />
+		<!-- Preload fonts -->
+		<link rel="preload" href="fonts/RedHatDisplay-Medium.woff" as="font" type="font/woff" crossorigin />
+		<link rel="preload" href="fonts/RedHatDisplay-Bold.woff" as="font" type="font/woff" crossorigin />
+		<link rel="preload" href="fonts/RedHatDisplay-Black.woff" as="font" type="font/woff" crossorigin />
+		<link rel="preload" href="fonts/RedHatDisplay-Medium.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="fonts/RedHatDisplay-Bold.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="fonts/RedHatDisplay-Black.woff2" as="font" type="font/woff2" crossorigin />
+	</head>
+	<body>
+		<!-- Card -->
+		<main class="main">
+			<img
+				class="main__img"
+				src="./images/illustration-hero.svg"
+				alt="Girl with headphones listening to music in her smartphone and dancing under the city night sky"
+			/>
+			<div class="main__body">
+				<h1 class="main__title">Order Summary</h1>
+				<p class="main__text">
+					You can now listen to millions of songs, audiobooks, and podcasts on any device anywhere
+					you like!
+				</p>
+				<div class="main__plan">
+					<img class="main__plan-icon" src="./images/icon-music.svg" alt="Music icon" />
+					<h2 class="main__plan-plan">Annual Plan</h2>
+					<p class="main__plan-price">$59.99/year</p>
+					<a href="" class="main__plan-change">Change</a>
+				</div>
+				<button class="btn btn--submit" type="submit" name="submit" value="submit">
+					Proceed to Payment
+				</button>
+				<button class="btn btn--cencel" type="button" name="cancel" value="cancel">
+					Cancel Order
+				</button>
+			</div>
+		</main>
+		<footer class="footer">
+			Challenge by
+			<a class="footer__link" href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded by
+			<a class="footer__link" href="https://www.frontendmentor.io/profile/Valeri85" target="_blank"
+				>Valeri</a
+			>.
+		</footer>
+	</body>
+</html>

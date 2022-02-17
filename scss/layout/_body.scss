@@ -1,0 +1,11 @@
+@use '../helpers/mixins';
+
+body {
+	display: grid;
+	background: var(--pale-blue) url('../../images/pattern-background-mobile.svg') no-repeat top;
+	text-align: center;
+	@include mixins.desktop {
+		background: var(--pale-blue) url('../../images/pattern-background-desktop.svg') no-repeat top;
+		background-size: contain;
+	}
+}

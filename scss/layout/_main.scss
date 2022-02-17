@@ -1,0 +1,103 @@
+@use '../helpers/functions';
+@use '../helpers/mixins';
+
+.main {
+	--desaturated-blue: hsl(224, 23%, 70%);
+	place-self: center;
+	width: functions.em(320);
+	background-color: var(--very-pale-blue);
+	border-radius: functions.em(20);
+	box-shadow: 0 15px 20px -15px var(--desaturated-blue);
+	@include mixins.desktop {
+		width: functions.em(360);
+	}
+	&__img {
+		border-top-left-radius: functions.em(20);
+		border-top-right-radius: functions.em(20);
+	}
+	&__body {
+		padding: 1.5em 1.5em 1.7em;
+		@include mixins.desktop {
+			padding: 1.8em 2.5em 2.25em;
+		}
+	}
+	&__title,
+	&__plan-plan,
+	&__plan-change {
+		font-weight: functions.weight('black');
+	}
+	&__title,
+	&__plan-plan {
+		color: var(--dark-blue);
+	}
+	&__title {
+		margin: 0.3em 0 0.6em;
+		font-size: 1.4rem;
+		@include mixins.desktop {
+			font-size: 1.35rem;
+		}
+	}
+	&__text {
+		margin-bottom: 2.5em;
+		@include mixins.desktop {
+			font-size: 0.8rem;
+		}
+	}
+	&__plan {
+		display: grid;
+		grid-template:
+			'icon plan change'
+			'icon .... change' /
+			1fr 1fr 1fr;
+		margin-bottom: 2.5em;
+		@include mixins.desktop {
+			grid-template:
+				'icon plan change'
+				'icon .... change' /
+				0.75fr 1fr 1fr;
+		}
+		&-icon,
+		&-change {
+			place-self: center;
+		}
+		&-icon {
+			grid-row: 1 / 3;
+			grid-area: icon;
+			@include mixins.desktop {
+				place-self: center end;
+				width: functions.em(37.5);
+				margin-right: 1em;
+			}
+		}
+		&-plan {
+			grid-area: plan;
+			place-self: end start;
+			font-size: 0.9rem;
+			@include mixins.desktop {
+				font-size: 0.8rem;
+			}
+		}
+		&-price {
+			place-self: start;
+			font-size: 0.88rem;
+			font-weight: functions.weight(bold);
+			@include mixins.desktop {
+				font-size: 0.78rem;
+				font-weight: functions.weight(medium);
+			}
+		}
+		&-change {
+			grid-area: change;
+			margin-left: 1em;
+			font-size: 0.82rem;
+			color: var(--bright-blue);
+			transition: color var(--animation-time) ease-out;
+			@include mixins.desktop {
+				font-size: 0.7rem;
+			}
+			&:hover {
+				color: var(--desaturated-blue);
+			}
+		}
+	}
+}
