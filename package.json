@@ -9,7 +9,8 @@
 		"groupMedia": "npx group-css-media-queries css/style.css css/style.css",
 		"postcss:autoprefixer": "npx postcss css/style.css -u autoprefixer -r",
 		"sass:compressed": "npx sass css/style.css:css/style.min.css --style compressed",
-		"ttf2woff": "npx ttf2woff fonts/RedHatDisplay-Medium.ttf fonts/RedHatDisplay-Medium.woff && npx ttf2woff fonts/RedHatDisplay-Bold.ttf fonts/RedHatDisplay-Bold.woff && npx ttf2woff fonts/RedHatDisplay-Black.ttf fonts/RedHatDisplay-Black.woff"
+		"ttf2woff": "npx ttf2woff fonts/RedHatDisplay-Medium.ttf fonts/RedHatDisplay-Medium.woff && npx ttf2woff fonts/RedHatDisplay-Bold.ttf fonts/RedHatDisplay-Bold.woff && npx ttf2woff fonts/RedHatDisplay-Black.ttf fonts/RedHatDisplay-Black.woff",
+		"build": "npm run groupMedia && npm run postcss:autoprefixer && npm run sass:compressed"
 	},
 	"keywords": [],
 	"author": "",
